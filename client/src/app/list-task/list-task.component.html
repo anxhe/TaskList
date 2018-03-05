@@ -1,0 +1,5 @@
+<ul class="tasks-container">
+  <li *ngFor="let task of tasks | filter:'title':search ; let i = index">
+    <app-task [task]='task'></app-task>
+  </li>
+</ul>

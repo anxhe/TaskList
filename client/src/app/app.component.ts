@@ -8,6 +8,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'app';
+  search = '';
 
   constructor(private meta: Meta) {
     this.meta.addTags([
@@ -15,5 +16,7 @@ export class AppComponent {
     ]);
   }
 
-
+  updateSearchText(text) {
+    this.search = text;
+  }
 }
