@@ -18,4 +18,9 @@ export class ListTaskComponent {
         this.tasks = tasks;
       });
   }
+
+  removeTask(id) {
+    this.tasks = this.tasks.filter(task => task.id !== id);
+  }
+
 }
