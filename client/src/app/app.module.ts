@@ -17,6 +17,7 @@ import { TaskComponent } from './task/task.component';
 
 // Pipes
 import { FilterPipe } from './pipes/filter.pipe';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     ListTaskComponent,
     FilterPipe,
     SearchTaskComponent,
-    TaskComponent
+    TaskComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

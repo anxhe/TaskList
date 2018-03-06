@@ -23,4 +23,15 @@ export class ListTaskComponent {
     this.tasks = this.tasks.filter(task => task.id !== id);
   }
 
+  addNewTask(taskTitle) {
+    this.tasks.unshift(
+      {
+        userId: 1,
+        id: this.tasks.length + 1,
+        title: taskTitle,
+        completed: false
+      }
+    );
+  }
+
 }
