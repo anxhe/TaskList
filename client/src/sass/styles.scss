@@ -1,2 +1,22 @@
 @import './variables';
 @import './mixins';
+@import 'reset-css/reset.css';
+
+// Layout
+.l-right {
+  float: right;
+}
+
+.l-wrap {
+  margin: 0 auto;
+  width: $content-width;
+}
+
+.title {
+  color: $color-green;
+  text-align: center;
+}
+
+body {
+  font-family: $font;
+}
