@@ -11,6 +11,7 @@
     width: $content-width / 1.5;
   }
   @media screen and (max-width: $on-phone ) {
+    margin: $space-unit auto;
     width: $content-width / 3;
   }
 }
