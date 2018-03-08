@@ -4,6 +4,8 @@
   background-color: $color-light;
   border: solid 1px $color-green;
   border-radius: $space-unit / 6;
+  display: flex;
+  justify-content: space-between;
   margin: $space-unit 0;
   padding: $space-unit / 2;
 
