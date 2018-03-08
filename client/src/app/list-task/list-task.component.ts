@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TaskService } from '../../service/task.service';
 
 @Component({
@@ -6,13 +6,15 @@ import { TaskService } from '../../service/task.service';
   templateUrl: './list-task.component.html',
   styleUrls: ['./list-task.component.scss']
 })
-export class ListTaskComponent {
+export class ListTaskComponent implements OnInit {
 
   @Input() search: string;
 
   tasks: Array<any> = [];
 
-  constructor(public taskService: TaskService) {
+  constructor(public taskService: TaskService) {}
+
+  ngOnInit() {
     this.taskService.getTasks()
       .subscribe(tasks => {
         this.tasks = tasks;
