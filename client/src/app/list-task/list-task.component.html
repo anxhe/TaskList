@@ -1,6 +1,6 @@
 <ul class="tasks-container">
   <app-new-task (ontask)="addNewTask($event)"></app-new-task>
   <li *ngFor="let task of tasks | filter:'title':search ; let i = index">
-    <app-task [task]='task' (ontaskDelete)="removeTask($event)"></app-task>
+    <app-admin-task [task]='task' (ontaskDelete)="removeTask($event)"></app-admin-task>
   </li>
 </ul>

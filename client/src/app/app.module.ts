@@ -13,12 +13,11 @@ import { TaskService } from '../service/task.service';
 import { AppComponent } from './app.component';
 import { ListTaskComponent } from './list-task/list-task.component';
 import { SearchTaskComponent } from './search-task/search-task.component';
-import { TaskComponent } from './task/task.component';
+import { AdminTaskComponent } from './admin-task/admin-task.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 // Pipes
 import { FilterPipe } from './pipes/filter.pipe';
-import { NewTaskComponent } from './new-task/new-task.component';
-
 
 @NgModule({
   declarations: [
@@ -26,8 +25,8 @@ import { NewTaskComponent } from './new-task/new-task.component';
     ListTaskComponent,
     FilterPipe,
     SearchTaskComponent,
-    TaskComponent,
-    NewTaskComponent
+    AdminTaskComponent,
+    NewTaskComponent,
   ],
   imports: [
     BrowserModule,

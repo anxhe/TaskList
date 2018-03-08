@@ -1,0 +1,13 @@
+@import '~sass/variables';
+
+.form-admin-task {
+  display: flex;
+  justify-content: space-between;
+  & > label {
+    cursor: pointer;
+
+    & > input {
+      display: none;
+    }
+  }
+}

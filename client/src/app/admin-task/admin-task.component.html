@@ -1,0 +1,10 @@
+<div class="form-admin-task">
+  <label>
+    <fa class="circle" [name]="task.completed ? 'check-circle' : 'circle-thin'"></fa>
+    <input type="checkbox" name="{{task.id}}" value="{{task.id}}" [checked]="task.completed" (change)='onCheck(task)'>
+    {{task.title}}
+  </label>
+  <a class="button" (click)="onDelete(task.id)">
+    <fa name="trash"></fa>
+  </a>
+</div>
