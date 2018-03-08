@@ -1,2 +1,5 @@
-<app-search-task (onsearch)="updateSearchText($event)"></app-search-task>
-<app-list-task [search]="search"></app-list-task>
+<div class="l-wrap">
+  <app-search-task (onsearch)="updateSearchText($event)"></app-search-task>
+  <h2 class="title">Admin Task</h2>
+  <app-list-task [search]="search"></app-list-task>
+</div>

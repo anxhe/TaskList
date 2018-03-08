@@ -1,5 +1,29 @@
 @import '~sass/variables';
 
 .search-box {
-  width: $content-width;
+  background-color: $color-light;
+  border: solid 1px $color-green;
+  border-radius: $space-unit / 6;
+  padding:  $space-unit / 2;
+  width: $content-width / 2;
+  input {
+    border: 0;
+    border-bottom: solid 1px $color-green;
+    width: 93%;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// Stylus on-phone
+
+@media screen and (max-width: $on-palm ) {
+  .search-box {
+    width: fit-content;
+    padding:  $space-unit / 3;
+    input {
+      width: fit-content;
+    }
+  }
 }

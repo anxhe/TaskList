@@ -1,0 +1,22 @@
+@import '~sass/variables';
+
+.form-new-task {
+  background-color: $color-light;
+  border: solid 1px $color-green;
+  border-radius: $space-unit / 6;
+  margin: $space-unit 0;
+  padding: $space-unit / 2;
+
+  input {
+    border: 0;
+    border-bottom: solid 1px $color-green;
+    width: 93%;
+
+    &:focus {
+      outline: none;
+    }
+    @media screen and (max-width: $on-phone ) {
+      width: fit-content;
+    }
+  }
+}

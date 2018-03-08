@@ -3,20 +3,28 @@
 @import 'reset-css/reset.css';
 
 // Layout
-.l-right {
-  float: right;
-}
 
 .l-wrap {
-  margin: 0 auto;
+  margin: $space-unit * 3 auto;
   width: $content-width;
+  @media screen and (max-width: $on-palm ) {
+    width: $content-width / 1.5;
+  }
+  @media screen and (max-width: $on-phone ) {
+    width: $content-width / 3;
+  }
 }
 
 .title {
   color: $color-green;
+  margin: $space-unit;
   text-align: center;
 }
 
-body {
-  font-family: $font;
+.circle {
+  color: $color-green;
+}
+
+.button {
+  padding: 0 $space-unit / 6;
 }

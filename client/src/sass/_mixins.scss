@@ -1,7 +1,12 @@
 body {
   background-color: $background-color;
+  font-family: $font;
+  font-size: $font-size;
+  @media screen and (max-width: $on-phone ) {
+    font-size: $font-size-little;
+  }
 }
 
-li {
-  list-style: none;
+h2 {
+  font-size: 25px;
 }

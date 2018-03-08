@@ -11,9 +11,10 @@ export class AppComponent {
   search = '';
 
   constructor(private meta: Meta) {
-    this.meta.addTags([
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
-    ]);
+    this.meta.updateTag({
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+    });
   }
 
   updateSearchText(text) {

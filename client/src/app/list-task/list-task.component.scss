@@ -1,12 +1,10 @@
 @import '~sass/variables';
 
 .tasks-container {
-  width: $content-width;
-  margin: 0 auto;
    & > li {
    background-color: $color-light;
    border-radius: $space-unit / 6;
-   margin: $space-unit / 6;
+   margin: $space-unit / 6 0;
    padding: $space-unit / 2;
   }
 }
