@@ -15,12 +15,13 @@ import { FormsModule } from '@angular/forms';
 describe('ListTaskComponent', () => {
   let component: ListTaskComponent;
   let fixture: ComponentFixture<ListTaskComponent>;
-  const tasks = [
-    { title: 'Foo', completed: false, id: 1 },
-  ];
+  let tasks: Array<object>;
 
   beforeEach(async(() => {
     const taskService = jasmine.createSpyObj('TaskService', ['getTasks']);
+    tasks = [
+      { title: 'Foo', completed: false, id: 1 },
+    ];
     const getTasksSpy = taskService.getTasks.and.returnValue(of(tasks));
 
     TestBed.configureTestingModule({
@@ -50,5 +51,17 @@ describe('ListTaskComponent', () => {
 
   it('lists tasks', () => {
     expect(component.tasks).toEqual(tasks);
+  });
+
+  it('#addNewTask() add new task inside tasks', () => {
+    expect(component.tasks.length).toEqual(1);
+    component.addNewTask('new task');
+    expect(component.tasks.length).toEqual(2);
+  });
+
+  it('#removeTask() remove task inside tasks', () => {
+    expect(component.tasks.length).toEqual(1);
+    component.removeTask(component.tasks[0].id);
+    expect(component.tasks.length).toEqual(0);
   });
 });
