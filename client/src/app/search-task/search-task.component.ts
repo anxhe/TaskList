@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-task',
@@ -9,10 +9,8 @@ export class SearchTaskComponent {
 
   @Output() onsearch = new EventEmitter<string>();
 
-  constructor() { }
-
-  notifyChange(event) {
-    this.onsearch.emit(event.target.value);
+  notifyChange(text) {
+    this.onsearch.emit(text);
   }
 
 }
