@@ -8,7 +8,7 @@ import { Component, Input, Output , EventEmitter } from '@angular/core';
 
 export class AdminTaskComponent {
 
-  @Input() task: string;
+  @Input() task: object;
   @Output() ontaskDelete = new EventEmitter<number>();
 
   constructor () {}
