@@ -1,5 +1,5 @@
 <div class="form-admin-task">
-  <label>
+  <label [ngClass]="{ 'task-completed': task.completed }" >
     <fa class="circle" [name]="task.completed ? 'check-circle' : 'circle-thin'"></fa>
     <input type="checkbox" name="{{task.id}}" value="{{task.id}}" [checked]="task.completed" (change)='onCheck(task)'>
     {{task.title}}
