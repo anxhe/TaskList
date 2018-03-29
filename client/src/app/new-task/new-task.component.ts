@@ -14,7 +14,9 @@ export class NewTaskComponent {
   }
 
   addTask(taskTitle) {
-    this.ontask.emit(taskTitle);
-    this.task = '';
+    if (taskTitle.trim() !== '') {
+      this.ontask.emit(taskTitle);
+      this.task = '';
+    }
   }
 }
