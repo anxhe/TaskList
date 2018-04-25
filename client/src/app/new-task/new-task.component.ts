@@ -14,7 +14,7 @@ export class NewTaskComponent {
   }
 
   addTask(taskTitle) {
-    if (taskTitle.trim() !== '') {
+    if (taskTitle !== undefined && taskTitle.trim() !== '') {
       this.ontask.emit(taskTitle);
       this.task = '';
     }
