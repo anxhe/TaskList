@@ -4,6 +4,8 @@ import {Http} from '@angular/http';
 import {Observable} from 'rxjs/RX';
 import 'rxjs/add/operator/map';
 
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+
 
 const BASEURL = 'https://jsonplaceholder.typicode.com';
 

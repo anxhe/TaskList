@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+// Firebase
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 // FontAwesome
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -32,7 +37,9 @@ import { FilterPipe } from './pipes/filter.pipe';
     BrowserModule,
     HttpModule,
     FormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase , 'TaskList')
   ],
   providers: [TaskService],
   bootstrap: [AppComponent]
