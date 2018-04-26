@@ -4,7 +4,7 @@
     <input type="checkbox" name="{{task.id}}" value="{{task.id}}" [checked]="task.completed" (change)='onCheck(task)'>
     {{task.title}}
   </label>
-  <a class="button" (click)="onDelete(task.id)">
+  <a class="button" (click)="onDelete(task)">
     <fa name="trash"></fa>
   </a>
 </div>

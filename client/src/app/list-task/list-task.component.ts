@@ -21,8 +21,8 @@ export class ListTaskComponent implements OnInit {
       });
   }
 
-  removeTask(id) {
-    this.tasks = this.tasks.filter(task => task.id !== id);
+  removeTask(task) {
+    this.taskService.deleteTask(task);
   }
 
   addNewTask(taskTitle: string) {

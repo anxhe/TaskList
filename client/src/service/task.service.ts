@@ -31,6 +31,10 @@ export class TaskService {
     return this.tasks;
   }
 
+  deleteTask(task: Task) {
+    this.tasksCollection.doc(task.id).delete();
+  }
+
   saveTask(task: Task) {
     const id = this.afs.createId();
     task.id = id;
