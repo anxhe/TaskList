@@ -10,7 +10,7 @@ export class ListTaskComponent implements OnInit {
 
   @Input() search: string;
 
-  tasks: Array<any> = [];
+  tasks: Array<object> = [];
 
   constructor(public taskService: TaskService) {}
 
@@ -25,15 +25,11 @@ export class ListTaskComponent implements OnInit {
     this.tasks = this.tasks.filter(task => task.id !== id);
   }
 
-  addNewTask(taskTitle) {
-    this.tasks.unshift(
-      {
-        userId: 1,
-        id: this.tasks.length + 1,
-        title: taskTitle,
-        completed: false
-      }
-    );
+  addNewTask(taskTitle: string) {
+    this.taskService.saveTask({
+      title: taskTitle,
+      completed: false
+    });
   }
 
 }
